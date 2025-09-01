@@ -1,0 +1,65 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="policeCarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#000051;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a237e;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="lightGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#skyGradient)"/>
+
+  <!-- Road -->
+  <rect x="0" y="200" width="400" height="100" fill="#2c2c2c"/>
+  <rect x="0" y="240" width="400" height="20" fill="#ffff00" opacity="0.8"/>
+  <rect x="0" y="260" width="400" height="2" fill="#ffffff"/>
+
+  <!-- Police Car -->
+  <g transform="translate(150, 180)">
+    <!-- Car Body -->
+    <path d="M20 30 Q20 15 35 15 L65 15 Q80 15 80 30 L80 45 L20 45 Z" fill="url(#policeCarGradient)" stroke="#000" stroke-width="1"/>
+    <!-- Car Hood -->
+    <rect x="35" y="10" width="30" height="20" fill="url(#policeCarGradient)" stroke="#000" stroke-width="1"/>
+    <!-- Wheels -->
+    <circle cx="30" cy="45" r="8" fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <circle cx="30" cy="45" r="4" fill="#666"/>
+    <circle cx="70" cy="45" r="8" fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <circle cx="70" cy="45" r="4" fill="#666"/>
+    <!-- Lights -->
+    <rect x="25" y="12" width="3" height="6" fill="#FFD700"/>
+    <rect x="72" y="12" width="3" height="6" fill="#FF0000"/>
+    <!-- Police Badge -->
+    <circle cx="50" cy="25" r="8" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+    <text x="50" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#000">POLICE</text>
+  </g>
+
+  <!-- Emergency Lights -->
+  <g transform="translate(180, 150)">
+    <circle cx="0" cy="0" r="15" fill="url(#lightGradient)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="8" fill="#FF0000" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="0.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00008B">POLITIE ACTIE</text>
+  <text x="200" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Snelle Respons - Professionele Bijstand</text>
+
+  <!-- Decorative Elements -->
+  <g opacity="0.3">
+    <circle cx="50" cy="100" r="20" fill="#FFD700" opacity="0.5"/>
+    <circle cx="350" cy="80" r="15" fill="#FF0000" opacity="0.4"/>
+    <circle cx="320" cy="120" r="12" fill="#0000FF" opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Connection Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Firebase Connection Test</h1>
+    <button onclick="testConnection()">Test Firebase Connection</button>
+    <div id="status" class="status info">Click the button to test your Firebase connection</div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js';
+        import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js';
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDCRYKrWUvtOtDAY4TThjlm7AxkzHG-62s",
+            authDomain: "blockchainkix-com-fy.firebaseapp.com",
+            databaseURL: "https://blockchainkix-com-fy-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "blockchainkix-com-fy",
+            storageBucket: "blockchainkix-com-fy.firebasestorage.app",
+            messagingSenderId: "148890561425",
+            appId: "1:148890561425:web:7cba0e7477141e3a880830"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        window.testConnection = async function() {
+            const statusDiv = document.getElementById('status');
+
+            try {
+                statusDiv.className = 'status info';
+                statusDiv.textContent = 'Testing Firebase connection...';
+
+                // Test 1: Check if we can write to database
+                const testRef = ref(db, 'connection_test');
+                await set(testRef, {
+                    timestamp: Date.now(),
+                    message: 'Connection test successful'
+                });
+
+                // Test 2: Check if we can read from database
+                const snapshot = await get(testRef);
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = `
+                        ✅ Firebase connection successful!<br>
+                        <strong>Test data:</strong> ${JSON.stringify(data, null, 2)}<br>
+                        <strong>Database URL:</strong> ${firebaseConfig.databaseURL}
+                    `;
+
+                    // Clean up test data
+                    await set(testRef, null);
+                } else {
+                    throw new Error('Could not read test data');
+                }
+
+            } catch (error) {
+                console.error('Firebase test error:', error);
+                statusDiv.className = 'status error';
+
+                let errorMessage = `❌ Connection failed: ${error.message}`;
+
+                if (error.message.includes('Invalid token')) {
+                    errorMessage += '<br><br><strong>Possible causes:</strong><br>1. Realtime Database not enabled in Firebase Console<br>2. Database URL is incorrect<br>3. Project ID mismatch';
+                } else if (error.message.includes('permission-denied')) {
+                    errorMessage += '<br><br><strong>Possible cause:</strong><br>Database rules are blocking access. Check database.rules.json';
+                } else if (error.message.includes('auth')) {
+                    errorMessage += '<br><br><strong>Possible cause:</strong><br>Authentication configuration issue';
+                }
+
+                statusDiv.innerHTML = errorMessage;
+            }
+        };
+    </script>
+</body>
+</html>

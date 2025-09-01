@@ -1,0 +1,22 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "forum": {
+      ".indexOn": ["categories", "sections", "topics"]
+    },
+    "articles": {
+      ".indexOn": ["timestamp"]
+    },
+    "users": {
+      "$user_id": {
+        ".read": "auth != null && auth.uid == $user_id",
+        ".write": "auth != null && auth.uid == $user_id"
+      }
+    },
+    "newsletter-subscribers": {
+      ".read": false,
+      ".write": true
+    }
+  }
+}

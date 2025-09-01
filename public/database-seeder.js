@@ -1,0 +1,431 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC5r9qQX4x8z9z9z9z9z9z9z9z9z9z9z9z9",
+  authDomain: "blockchainkix-com-fy.firebaseapp.com",
+  databaseURL: "https://blockchainkix-com-fy-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "blockchainkix-com-fy",
+  storageBucket: "blockchainkix-com-fy.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef1234567890abcdef",
+  measurementId: "G-ABCDEFGHIJ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth(app);
+
+// Sample data for forum database
+const forumData = {
+  categories: {
+    algemeen: {
+      id: "algemeen",
+      name: "Algemene categorieën",
+      order: 1
+    },
+    actueel: {
+      id: "actueel",
+      name: "Actuele zaken",
+      order: 2
+    },
+    regionaal: {
+      id: "regionaal",
+      name: "Regionaal",
+      order: 3
+    },
+    preventie: {
+      id: "preventie",
+      name: "Preventie en veiligheid",
+      order: 4
+    }
+  },
+  sections: {
+    aankondigingen: {
+      id: "aankondigingen",
+      categoryId: "algemeen",
+      title: "Aankondigingen",
+      description: "Belangrijke mededelingen over het forum en de website.",
+      icon: "fas fa-bullhorn",
+      postCount: 42,
+      topicCount: 12,
+      latestPost: {
+        title: "Welkom bij het nieuwe forum",
+        time: "Vandaag, 09:45"
+      },
+      location: "Landelijk",
+      tags: ["aankondigingen", "forum", "website"]
+    },
+    welkom: {
+      id: "welkom",
+      categoryId: "algemeen",
+      title: "Welkom & Introductie",
+      description: "Nieuw op het forum? Stel jezelf hier voor aan de community.",
+      icon: "fas fa-handshake",
+      postCount: 156,
+      topicCount: 58,
+      latestPost: {
+        title: "Nieuw lid uit Rotterdam",
+        time: "Gisteren, 17:21"
+      },
+      location: "Landelijk",
+      tags: ["welkom", "introductie", "nieuw"]
+    },
+    recente_incidenten: {
+      id: "recente_incidenten",
+      categoryId: "actueel",
+      title: "Recente incidenten",
+      description: "Discussieer over recente politieberichten en incidenten in Nederland.",
+      icon: "fas fa-newspaper",
+      postCount: 842,
+      topicCount: 254,
+      latestPost: {
+        title: "Steekincident in Groningen",
+        time: "Vandaag, 12:32"
+      },
+      location: "Landelijk",
+      tags: ["incident", "politiebericht", "actueel"]
+    },
+    juridische_kwesties: {
+      id: "juridische_kwesties",
+      categoryId: "actueel",
+      title: "Juridische kwesties",
+      description: "Vragen en discussies over wetgeving en juridische zaken.",
+      icon: "fas fa-balance-scale",
+      postCount: 524,
+      topicCount: 175,
+      latestPost: {
+        title: "Nieuwe wetgeving mbt cameratoezicht",
+        time: "3 dagen geleden"
+      },
+      location: "Landelijk",
+      tags: ["juridisch", "wetgeving", "advies"]
+    },
+    noord_nederland: {
+      id: "noord_nederland",
+      categoryId: "regionaal",
+      title: "Noord-Nederland",
+      description: "Discussies over Groningen, Friesland en Drenthe.",
+      icon: "fas fa-map-marker-alt",
+      postCount: 463,
+      topicCount: 178,
+      latestPost: {
+        title: "Inbraakgolf Leeuwarden",
+        time: "Vandaag, 08:14"
+      },
+      location: "Noord-Nederland",
+      tags: ["groningen", "friesland", "drenthe"]
+    },
+    randstad: {
+      id: "randstad",
+      categoryId: "regionaal",
+      title: "Randstad",
+      description: "Discussies over Amsterdam, Rotterdam, Den Haag en Utrecht.",
+      icon: "fas fa-map-marker-alt",
+      postCount: 891,
+      topicCount: 302,
+      latestPost: {
+        title: "Fietsdiefstal Centraal Station Amsterdam",
+        time: "Gisteren, 21:36"
+      },
+      location: "Randstad",
+      tags: ["amsterdam", "rotterdam", "denhaag", "utrecht"]
+    },
+    zuid_nederland: {
+      id: "zuid_nederland",
+      categoryId: "regionaal",
+      title: "Zuid-Nederland",
+      description: "Discussies over Noord-Brabant, Limburg en Zeeland.",
+      icon: "fas fa-map-marker-alt",
+      postCount: 615,
+      topicCount: 234,
+      latestPost: {
+        title: "Drugsvondst Eindhoven",
+        time: "2 dagen geleden"
+      },
+      location: "Zuid-Nederland",
+      tags: ["brabant", "limburg", "zeeland"]
+    },
+    woningbeveiliging: {
+      id: "woningbeveiliging",
+      categoryId: "preventie",
+      title: "Woningbeveiliging",
+      description: "Tips en adviezen over het beveiligen van je woning tegen inbraak.",
+      icon: "fas fa-shield-alt",
+      postCount: 389,
+      topicCount: 125,
+      latestPost: {
+        title: "Slimme deurbellen: ervaringen",
+        time: "3 dagen geleden"
+      },
+      location: "Landelijk",
+      tags: ["beveiliging", "inbraak", "preventie"]
+    },
+    buurtpreventie: {
+      id: "buurtpreventie",
+      categoryId: "preventie",
+      title: "Buurtpreventie",
+      description: "Discussies over buurtpreventie, WhatsApp-groepen en burgerwachten.",
+      icon: "fas fa-street-view",
+      postCount: 472,
+      topicCount: 158,
+      latestPost: {
+        title: "Opzetten buurtpreventie in kleine dorpen",
+        time: "Gisteren, 14:05"
+      },
+      location: "Landelijk",
+      tags: ["buurtpreventie", "whatsapp", "burgerwacht"]
+    }
+  },
+  topics: {
+    topic_001: {
+      id: "topic_001",
+      sectionId: "recente_incidenten",
+      title: "Grote brand in Rotterdamse haven - chemische stoffen lekken uit",
+      author: "Nieuwslezer123",
+      createdAt: "2025-08-29T10:30:00Z",
+      lastPostAt: "2025-08-29T14:45:00Z",
+      postCount: 23,
+      viewCount: 156,
+      isSticky: false,
+      isLocked: false,
+      tags: ["brand", "rotterdam", "haven", "chemisch"],
+      content: "Vanochtend is er een grote brand uitgebroken in de Rotterdamse haven waarbij chemische stoffen zijn gelekt. De brandweer is massaal uitgerukt en heeft het gebied afgezet. Wat zijn jullie ervaringen met dergelijke incidenten?"
+    },
+    topic_002: {
+      id: "topic_002",
+      sectionId: "recente_incidenten",
+      title: "Massaal fietsendiefstal in Amsterdam - politie zoekt getuigen",
+      author: "Fietsliefhebber",
+      createdAt: "2025-08-28T16:20:00Z",
+      lastPostAt: "2025-08-29T09:15:00Z",
+      postCount: 45,
+      viewCount: 289,
+      isSticky: false,
+      isLocked: false,
+      tags: ["fietsendiefstal", "amsterdam", "getuigen"],
+      content: "De afgelopen week zijn er meer dan 50 fietsen gestolen in de Amsterdamse binnenstad. De politie heeft camerabeelden vrijgegeven. Heeft iemand iets gezien?"
+    },
+    topic_003: {
+      id: "topic_003",
+      sectionId: "recente_incidenten",
+      title: "Overval op juwelier in Utrecht - daders nog voortvluchtig",
+      author: "UtrechtBewoner",
+      createdAt: "2025-08-27T11:45:00Z",
+      lastPostAt: "2025-08-29T13:20:00Z",
+      postCount: 67,
+      viewCount: 423,
+      isSticky: false,
+      isLocked: false,
+      tags: ["overval", "juwelier", "utrecht", "voortvluchtig"],
+      content: "Gisterenavond is er een gewapende overval geweest op een juwelier in het centrum van Utrecht. De daders zijn nog niet gepakt. Laten we elkaar waarschuwen voor verdachte personen."
+    },
+    topic_004: {
+      id: "topic_004",
+      sectionId: "juridische_kwesties",
+      title: "Nieuwe privacywetgeving - wat betekent dit voor buurtpreventie apps?",
+      author: "PrivacyExpert",
+      createdAt: "2025-08-26T14:30:00Z",
+      lastPostAt: "2025-08-29T11:10:00Z",
+      postCount: 34,
+      viewCount: 198,
+      isSticky: true,
+      isLocked: false,
+      tags: ["privacy", "wetgeving", "buurtpreventie", "apps"],
+      content: "De nieuwe AVG-wetgeving heeft gevolgen voor hoe we omgaan met persoonsgegevens in buurtpreventie apps. Wat zijn de ervaringen en hoe kunnen we ons aanpassen?"
+    },
+    topic_005: {
+      id: "topic_005",
+      sectionId: "randstad",
+      title: "Verkeerschaos na ongeluk A4 bij Den Haag",
+      author: "VerkeersUpdate",
+      createdAt: "2025-08-29T07:15:00Z",
+      lastPostAt: "2025-08-29T12:30:00Z",
+      postCount: 28,
+      viewCount: 167,
+      isSticky: false,
+      isLocked: false,
+      tags: ["verkeer", "a4", "denhaag", "ongeluk"],
+      content: "Vanmorgen is er een ernstig ongeluk gebeurd op de A4 bij Den Haag, wat zorgt voor enorme files. Alternatieve routes worden aangeraden."
+    },
+    topic_006: {
+      id: "topic_006",
+      sectionId: "noord_nederland",
+      title: "Stormschade in Groningen - hulp gevraagd voor opruimen",
+      author: "GroningenHulp",
+      createdAt: "2025-08-28T19:45:00Z",
+      lastPostAt: "2025-08-29T08:20:00Z",
+      postCount: 41,
+      viewCount: 234,
+      isSticky: false,
+      isLocked: false,
+      tags: ["storm", "schade", "groningen", "hulp"],
+      content: "Na de zware storm van gisteren is er veel schade in Groningen. Buren helpen buren met opruimen. Wie heeft hulp nodig of kan helpen?"
+    },
+    topic_007: {
+      id: "topic_007",
+      sectionId: "zuid_nederland",
+      title: "Drugslab ontmanteld in Eindhoven - gevaarlijke chemicaliën gevonden",
+      author: "VeiligheidEerst",
+      createdAt: "2025-08-27T13:20:00Z",
+      lastPostAt: "2025-08-29T10:45:00Z",
+      postCount: 52,
+      viewCount: 312,
+      isSticky: false,
+      isLocked: false,
+      tags: ["drugslab", "eindhoven", "chemicaliën", "ontmanteld"],
+      content: "De politie heeft gisteren een groot drugslab ontmanteld in Eindhoven. Er zijn gevaarlijke chemicaliën gevonden. Bewoners in de buurt worden gewaarschuwd."
+    },
+    topic_008: {
+      id: "topic_008",
+      sectionId: "woningbeveiliging",
+      title: "Nieuwe slimme sloten - ervaringen en aanbevelingen",
+      author: "TechLiefhebber",
+      createdAt: "2025-08-25T16:00:00Z",
+      lastPostAt: "2025-08-29T15:30:00Z",
+      postCount: 89,
+      viewCount: 567,
+      isSticky: false,
+      isLocked: false,
+      tags: ["slimme-sloten", "ervaringen", "aanbevelingen", "beveiliging"],
+      content: "Ik heb onlangs slimme sloten geïnstalleerd. Wie heeft ervaringen met verschillende merken? Wat zijn jullie aanbevelingen?"
+    },
+    topic_009: {
+      id: "topic_009",
+      sectionId: "buurtpreventie",
+      title: "Nieuwe WhatsApp groep voor Tilburg-Noord",
+      author: "TilburgBewoner",
+      createdAt: "2025-08-28T12:10:00Z",
+      lastPostAt: "2025-08-29T14:15:00Z",
+      postCount: 31,
+      viewCount: 145,
+      isSticky: false,
+      isLocked: false,
+      tags: ["whatsapp", "tilburg", "buurtpreventie", "groep"],
+      content: "We hebben een nieuwe WhatsApp groep opgericht voor buurtpreventie in Tilburg-Noord. Interesse? Stuur me een bericht!"
+    },
+    topic_010: {
+      id: "topic_010",
+      sectionId: "recente_incidenten",
+      title: "Cyberaanval op gemeente Leeuwarden - systemen plat",
+      author: "CyberBewust",
+      createdAt: "2025-08-29T06:00:00Z",
+      lastPostAt: "2025-08-29T13:45:00Z",
+      postCount: 38,
+      viewCount: 201,
+      isSticky: true,
+      isLocked: false,
+      tags: ["cyberaanval", "leeuwarden", "gemeente", "systemen"],
+      content: "De gemeente Leeuwarden is getroffen door een cyberaanval waardoor alle systemen plat liggen. Wat betekent dit voor de veiligheid van onze gegevens?"
+    }
+  },
+  articles: {
+    article_001: {
+      id: "article_001",
+      title: "Grote brand in Rotterdamse haven - chemische stoffen lekken uit",
+      content: "Vanochtend is er een grote brand uitgebroken in de Rotterdamse haven waarbij chemische stoffen zijn gelekt. De brandweer is massaal uitgerukt.",
+      timestamp: Date.now() - 86400000, // 1 day ago
+      category: "incident",
+      location: "Rotterdam",
+      tags: ["brand", "haven", "chemisch"]
+    },
+    article_002: {
+      id: "article_002",
+      title: "Massaal fietsendiefstal in Amsterdam - politie zoekt getuigen",
+      content: "De afgelopen week zijn er meer dan 50 fietsen gestolen in de Amsterdamse binnenstad. De politie heeft camerabeelden vrijgegeven.",
+      timestamp: Date.now() - 172800000, // 2 days ago
+      category: "diefstal",
+      location: "Amsterdam",
+      tags: ["fiets", "diefstal", "getuigen"]
+    },
+    article_003: {
+      id: "article_003",
+      title: "Overval op juwelier in Utrecht - daders nog voortvluchtig",
+      content: "Gisterenavond is er een gewapende overval geweest op een juwelier in het centrum van Utrecht. De daders zijn nog niet gepakt.",
+      timestamp: Date.now() - 259200000, // 3 days ago
+      category: "overval",
+      location: "Utrecht",
+      tags: ["overval", "juwelier", "voortvluchtig"]
+    },
+    article_004: {
+      id: "article_004",
+      title: "Cyberaanval op gemeente Leeuwarden - systemen plat",
+      content: "De gemeente Leeuwarden is getroffen door een cyberaanval waardoor alle systemen plat liggen.",
+      timestamp: Date.now() - 43200000, // 12 hours ago
+      category: "cybercrime",
+      location: "Leeuwarden",
+      tags: ["cyberaanval", "gemeente", "systemen"]
+    },
+    article_005: {
+      id: "article_005",
+      title: "Stormschade in Groningen - hulp gevraagd voor opruimen",
+      content: "Na de zware storm van gisteren is er veel schade in Groningen. Buren helpen buren met opruimen.",
+      timestamp: Date.now() - 7200000, // 2 hours ago
+      category: "weer",
+      location: "Groningen",
+      tags: ["storm", "schade", "hulp"]
+    }
+  }
+};
+
+// Function to seed the database
+async function seedDatabase() {
+  try {
+    console.log('Starting database seeding...');
+
+    // Seed categories
+    console.log('Seeding categories...');
+    const categoriesRef = ref(database, 'forum/categories');
+    await set(categoriesRef, forumData.categories);
+
+    // Seed sections
+    console.log('Seeding sections...');
+    const sectionsRef = ref(database, 'forum/sections');
+    await set(sectionsRef, forumData.sections);
+
+    // Seed topics
+    console.log('Seeding topics...');
+    const topicsRef = ref(database, 'forum/topics');
+    await set(topicsRef, forumData.topics);
+
+    // Seed articles
+    console.log('Seeding articles...');
+    const articlesRef = ref(database, 'articles');
+    await set(articlesRef, forumData.articles);
+
+    console.log('Database seeding completed successfully!');
+    console.log('Forum database structure created with:');
+    console.log('- 4 categories (algemeen, actueel, regionaal, preventie)');
+    console.log('- 9 sections with realistic Dutch police/security topics');
+    console.log('- 10 sample topics based on current news events');
+    console.log('- 5 recent articles for the news ticker');
+
+  } catch (error) {
+    console.error('Error seeding database:', error);
+  }
+}
+
+// Function to clear database (optional)
+async function clearDatabase() {
+  try {
+    console.log('Clearing database...');
+    await set(ref(database, 'forum'), null);
+    await set(ref(database, 'articles'), null);
+    console.log('Database cleared successfully!');
+  } catch (error) {
+    console.error('Error clearing database:', error);
+  }
+}
+
+// Export functions for use in browser console or as module
+window.seedDatabase = seedDatabase;
+window.clearDatabase = clearDatabase;
+
+// Auto-run seeding when script loads (uncomment to auto-run)
+// seedDatabase();
+
+console.log('Database seeding script loaded. Run seedDatabase() to populate the database.');
+console.log('Run clearDatabase() to clear all data before reseeding.');

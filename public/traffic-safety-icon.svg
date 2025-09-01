@@ -1,0 +1,66 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="trafficGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F7931E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD23F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#666;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#333;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#e8f4f8" rx="10"/>
+
+  <!-- Road -->
+  <rect x="20" y="140" width="160" height="40" fill="url(#roadGradient)" rx="5"/>
+  <rect x="20" y="155" width="160" height="10" fill="#ffff00" opacity="0.7"/>
+
+  <!-- Traffic Light -->
+  <g transform="translate(100, 60)">
+    <!-- Pole -->
+    <rect x="-3" y="40" width="6" height="60" fill="#333"/>
+    <!-- Light Box -->
+    <rect x="-15" y="-20" width="30" height="60" fill="#000" rx="5"/>
+    <!-- Lights -->
+    <circle cx="0" cy="-5" r="8" fill="#FF0000" opacity="0.3"/>
+    <circle cx="0" cy="10" r="8" fill="#FFFF00" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="25" r="8" fill="#00FF00" opacity="0.3"/>
+  </g>
+
+  <!-- Cars -->
+  <g transform="translate(40, 130)">
+    <!-- Car 1 -->
+    <rect x="0" y="0" width="25" height="12" fill="#FF0000" rx="2"/>
+    <circle cx="5" cy="12" r="3" fill="#333"/>
+    <circle cx="20" cy="12" r="3" fill="#333"/>
+  </g>
+
+  <g transform="translate(135, 125)">
+    <!-- Car 2 -->
+    <rect x="0" y="0" width="25" height="12" fill="#0000FF" rx="2"/>
+    <circle cx="5" cy="12" r="3" fill="#333"/>
+    <circle cx="20" cy="12" r="3" fill="#333"/>
+  </g>
+
+  <!-- Stop Sign -->
+  <g transform="translate(30, 100)">
+    <polygon points="0,0 15,-10 30,0 30,20 15,30 0,20" fill="#FF0000" stroke="#ffffff" stroke-width="2"/>
+    <text x="15" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#ffffff">STOP</text>
+  </g>
+
+  <!-- Speed Limit Sign -->
+  <g transform="translate(140, 90)">
+    <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000" stroke-width="2"/>
+    <circle cx="0" cy="0" r="15" fill="#000"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">50</text>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00008B">VERKEERSVEILIGHEID</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Verkeer & Mobiliteit</text>
+</svg>

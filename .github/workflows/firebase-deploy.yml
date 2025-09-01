@@ -1,0 +1,45 @@
+name: 🚀 Deploy to Firebase
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: 📦 Install dependencies
+      run: npm install
+
+    - name: 🔧 Install Firebase CLI
+      run: npm install -g firebase-tools
+
+    - name: 🏗️ Build (if needed)
+      run: |
+        # Add build steps here if you have a build process
+        echo "Build step - customize as needed"
+
+    - name: 🚀 Deploy to Firebase
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      run: |
+        firebase deploy --only hosting --token ${{ secrets.FIREBASE_TOKEN }}
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    - name: ✅ Deployment Status
+      if: always()
+      run: |
+        echo "Deployment completed!"
+        echo "Live URL: https://politie-forum.web.app"

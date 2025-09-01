@@ -1,0 +1,150 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="environmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pollutionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6b7280;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="toxicGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7c2d12;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#ecfdf5" rx="10"/>
+
+  <!-- Forest Background -->
+  <g transform="translate(20, 100)">
+    <!-- Trees -->
+    <g transform="translate(0, 0)">
+      <rect x="2" y="15" width="4" height="15" fill="#8b4513"/>
+      <polygon points="0,15 4,5 8,15" fill="#059669"/>
+    </g>
+    <g transform="translate(15, 0)">
+      <rect x="2" y="15" width="4" height="15" fill="#8b4513"/>
+      <polygon points="0,15 4,5 8,15" fill="#10b981"/>
+    </g>
+    <g transform="translate(30, 0)">
+      <rect x="2" y="15" width="4" height="15" fill="#8b4513"/>
+      <polygon points="0,15 4,5 8,15" fill="#059669"/>
+    </g>
+    <g transform="translate(45, 0)">
+      <rect x="2" y="15" width="4" height="15" fill="#8b4513"/>
+      <polygon points="0,15 4,5 8,15" fill="#10b981"/>
+    </g>
+  </g>
+
+  <!-- River/Pollution -->
+  <g transform="translate(80, 120)">
+    <!-- River Bed -->
+    <path d="M0,20 Q20,15 40,20 Q60,25 80,20 Q100,15 120,20" fill="none" stroke="#60a5fa" stroke-width="8"/>
+    <!-- Pollution -->
+    <circle cx="20" cy="15" r="3" fill="url(#toxicGradient)" opacity="0.7"/>
+    <circle cx="50" cy="18" r="2" fill="url(#toxicGradient)" opacity="0.7"/>
+    <circle cx="80" cy="16" r="4" fill="url(#toxicGradient)" opacity="0.7"/>
+    <circle cx="110" cy="19" r="2.5" fill="url(#toxicGradient)" opacity="0.7"/>
+  </g>
+
+  <!-- Factory/Pollution Source -->
+  <g transform="translate(140, 60)">
+    <!-- Factory Building -->
+    <rect x="0" y="20" width="30" height="30" fill="#6b7280" stroke="#374151" stroke-width="1"/>
+    <!-- Chimney -->
+    <rect x="10" y="0" width="4" height="25" fill="#4b5563"/>
+    <!-- Smoke -->
+    <ellipse cx="12" cy="5" rx="3" ry="2" fill="#9ca3af" opacity="0.6"/>
+    <ellipse cx="12" cy="2" rx="2" ry="1.5" fill="#9ca3af" opacity="0.5"/>
+    <ellipse cx="12" cy="-1" rx="1.5" ry="1" fill="#9ca3af" opacity="0.4"/>
+    <!-- Windows -->
+    <rect x="5" y="25" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+    <rect x="15" y="25" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+    <rect x="5" y="35" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+    <rect x="15" y="35" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+  </g>
+
+  <!-- Environmental Officer -->
+  <g transform="translate(50, 90)">
+    <circle cx="0" cy="-5" r="5" fill="#fbbf24"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#059669"/>
+    <!-- Badge -->
+    <circle cx="0" cy="3" r="2" fill="#ffd700"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#000">P</text>
+    <!-- Clipboard -->
+    <rect x="-4" y="5" width="3" height="4" fill="#f3f4f6" stroke="#6b7280" stroke-width="0.5"/>
+  </g>
+
+  <!-- Wildlife Protection -->
+  <g transform="translate(30, 50)">
+    <!-- Deer -->
+    <circle cx="0" cy="0" r="3" fill="#8b4513"/>
+    <rect x="-1" y="3" width="2" height="4" fill="#8b4513"/>
+    <!-- Antlers -->
+    <line x1="-2" y1="-1" x2="-4" y2="-3" stroke="#8b4513" stroke-width="1"/>
+    <line x1="2" y1="-1" x2="4" y2="-3" stroke="#8b4513" stroke-width="1"/>
+    <line x1="-4" y1="-3" x2="-5" y2="-2" stroke="#8b4513" stroke-width="1"/>
+    <line x1="4" y1="-3" x2="5" y2="-2" stroke="#8b4513" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(70, 45)">
+    <!-- Bird -->
+    <ellipse cx="0" cy="0" rx="4" ry="2" fill="#374151"/>
+    <polygon points="-2,-2 0,-4 2,-2" fill="#374151"/>
+    <!-- Wings -->
+    <ellipse cx="-3" cy="0" rx="2" ry="1" fill="#6b7280"/>
+    <ellipse cx="3" cy="0" rx="2" ry="1" fill="#6b7280"/>
+  </g>
+
+  <!-- Toxic Waste -->
+  <g transform="translate(100, 140)">
+    <!-- Barrel -->
+    <rect x="0" y="0" width="12" height="15" fill="#374151" rx="2"/>
+    <rect x="1" y="2" width="10" height="11" fill="#4b5563"/>
+    <!-- Radiation Symbol -->
+    <circle cx="6" cy="7" r="3" fill="none" stroke="#ffff00" stroke-width="1"/>
+    <circle cx="6" cy="7" r="1" fill="#ffff00"/>
+    <!-- Rays -->
+    <line x1="6" y1="4" x2="6" y2="2" stroke="#ffff00" stroke-width="1"/>
+    <line x1="6" y1="10" x2="6" y2="12" stroke="#ffff00" stroke-width="1"/>
+    <line x1="3" y1="7" x2="1" y2="7" stroke="#ffff00" stroke-width="1"/>
+    <line x1="9" y1="7" x2="11" y2="7" stroke="#ffff00" stroke-width="1"/>
+    <!-- Warning Label -->
+    <rect x="2" y="10" width="8" height="2" fill="#ffff00"/>
+    <text x="6" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" fill="#000">HAZARD</text>
+  </g>
+
+  <!-- Environmental Symbols -->
+  <g transform="translate(20, 20)">
+    <!-- Recycle Symbol -->
+    <path d="M0,0 Q5,2 8,0 Q11,-2 8,-5 Q5,-3 0,-5 Q-3,-2 0,0" fill="#10b981"/>
+    <path d="M8,0 Q13,2 16,0 Q19,-2 16,-5 Q13,-3 8,-5" fill="#059669"/>
+    <path d="M16,0 Q21,2 24,0 Q27,-2 24,-5 Q21,-3 16,-5" fill="#047857"/>
+    <!-- Arrows -->
+    <polygon points="6,-1 8,1 6,3" fill="#ffffff"/>
+    <polygon points="14,-1 16,1 14,3" fill="#ffffff"/>
+    <polygon points="22,-1 24,1 22,3" fill="#ffffff"/>
+  </g>
+
+  <g transform="translate(60, 20)">
+    <!-- Leaf -->
+    <path d="M0,0 Q-3,3 -2,6 Q0,5 2,6 Q3,3 0,0" fill="#10b981"/>
+    <line x1="0" y1="6" x2="0" y2="10" stroke="#8b4513" stroke-width="1"/>
+  </g>
+
+  <!-- Protection Shield -->
+  <g transform="translate(150, 30)">
+    <path d="M0,-10 L-8,5 L8,5 Z" fill="url(#environmentGradient)" stroke="#047857" stroke-width="2"/>
+    <!-- Tree Symbol -->
+    <rect x="-2" y="-2" width="1" height="3" fill="#ffffff"/>
+    <polygon points="-3,-2 -2,-4 -1,-2" fill="#ffffff"/>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#059669">MILIEUCRIMINALITEIT</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#047857">Natuur & Milieu</text>
+</svg>

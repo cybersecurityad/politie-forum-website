@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <defs>
+    <style>
+      .background { fill: #00008b; }
+      .shield { fill: #ffffff; }
+      .star { fill: #00008b; }
+      .text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+    </style>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="90" cy="90" r="90" class="background"/>
+  <!-- Police Shield -->
+  <path class="shield" d="M90 30L130 50V90C130 115 112.5 135 90 135C67.5 135 50 115 50 90V50L90 30Z"/>
+  <!-- Star -->
+  <path class="star" d="M90 50L100 70L120 70L105 82.5L110 105L90 92.5L70 105L75 82.5L60 70L80 70L90 50Z"/>
+  <!-- Text -->
+  <text x="90" y="155" text-anchor="middle" class="text">Politie</text>
+  <text x="90" y="170" text-anchor="middle" class="text">Forum.nl</text>
+</svg>

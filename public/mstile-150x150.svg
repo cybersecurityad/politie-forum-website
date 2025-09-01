@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <defs>
+    <style>
+      .background { fill: #00008b; }
+      .shield { fill: #ffffff; }
+      .star { fill: #00008b; }
+      .border { fill: none; stroke: #002d6b; stroke-width: 2; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="150" height="150" class="background"/>
+  <!-- Police Shield -->
+  <path class="shield" d="M75 20L115 35V75C115 95 100 110 75 110C50 110 35 95 35 75V35L75 20Z"/>
+  <path class="border" d="M75 20L115 35V75C115 95 100 110 75 110C50 110 35 95 35 75V35L75 20Z"/>
+  <!-- Star -->
+  <path class="star" d="M75 35L85 50L100 50L88 58L92 73L75 63L58 73L62 58L50 50L65 50L75 35Z"/>
+</svg>

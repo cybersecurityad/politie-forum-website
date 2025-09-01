@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      .background { fill: #00008b; }
+      .shield { fill: #ffffff; }
+      .star { fill: #00008b; }
+      .accent { fill: #f60707; }
+      .text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; }
+    </style>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" class="background"/>
+  <!-- Police Shield -->
+  <path class="shield" d="M256 80L384 144V256C384 336 320 400 256 400C192 400 128 336 128 256V144L256 80Z"/>
+  <!-- Star -->
+  <path class="star" d="M256 144L288 208L352 208L296 248L312 312L256 272L200 312L216 248L160 208L224 208L256 144Z"/>
+  <!-- Accent Elements -->
+  <rect x="160" y="320" width="192" height="16" class="accent" rx="8"/>
+  <circle cx="256" cy="360" r="12" class="accent"/>
+  <!-- Text -->
+  <text x="256" y="420" text-anchor="middle" class="text">Politie</text>
+  <text x="256" y="460" text-anchor="middle" class="text">Forum.nl</text>
+</svg>

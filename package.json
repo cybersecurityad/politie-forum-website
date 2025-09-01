@@ -1,0 +1,66 @@
+{
+  "name": "politie-forum-nl",
+  "version": "1.0.0",
+  "description": "Politie Forum Nederland - Het officiële Nederlandse politieforum voor burgers, professionals en veiligheidsdeskundigen",
+  "main": "index.js",
+  "scripts": {
+    "start": "firebase serve",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "build": "echo 'Build step - customize as needed'",
+    "test": "echo 'No tests specified yet'",
+    "lint": "echo 'Linting - customize as needed'",
+    "seed": "open public/database-seeder.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/politie-forum-nl.git"
+  },
+  "keywords": [
+    "politie",
+    "nederland",
+    "forum",
+    "veiligheid",
+    "politie-forum",
+    "firebase",
+    "pwa",
+    "seo",
+    "dutch-police",
+    "community",
+    "safety",
+    "prevention",
+    "cybercrime",
+    "traffic-safety",
+    "emergency-services"
+  ],
+  "author": "Politie Forum Nederland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/politie-forum-nl/issues"
+  },
+  "homepage": "https://politie-forum.nl",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  },
+  "firebase": {
+    "hosting": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  }
+}

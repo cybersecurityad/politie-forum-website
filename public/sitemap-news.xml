@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://politie-forum.nl/</loc>
+    <lastmod>2025-01-15T12:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://politie-forum.nl/politie-nl-logo.png</image:loc>
+      <image:title>Politie-Forum.nl Logo</image:title>
+      <image:caption>Politie-Forum.nl - Nederlandse Politie Forum</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/forum</loc>
+    <lastmod>2025-01-15T12:00:00+01:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- News Categories -->
+  <url>
+    <loc>https://politie-forum.nl/nieuws</loc>
+    <lastmod>2025-01-15T12:00:00+01:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Politie-Forum.nl</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-15T12:00:00+01:00</news:publication_date>
+      <news:title>Laatste politienieuws uit Nederland</news:title>
+      <news:keywords>politie, nieuws, Nederland, veiligheid</news:keywords>
+    </news:news>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/forum/recente-incidenten</loc>
+    <lastmod>2025-01-15T11:30:00+01:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Politie-Forum.nl</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-15T11:30:00+01:00</news:publication_date>
+      <news:title>Recente incidenten - Politie-Forum.nl</news:title>
+      <news:keywords>incidenten, politie, nieuws, Nederland</news:keywords>
+    </news:news>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/opsporingen</loc>
+    <lastmod>2025-01-15T11:00:00+01:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Politie-Forum.nl</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-15T11:00:00+01:00</news:publication_date>
+      <news:title>Actuele opsporingen - Politie-Forum.nl</news:title>
+      <news:keywords>opsporingen, politie, gezocht, Nederland</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Regional Categories -->
+  <url>
+    <loc>https://politie-forum.nl/forum/noord-nederland</loc>
+    <lastmod>2025-01-15T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/forum/randstad</loc>
+    <lastmod>2025-01-15T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/forum/zuid-nederland</loc>
+    <lastmod>2025-01-15T10:30:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Safety Categories -->
+  <url>
+    <loc>https://politie-forum.nl/forum/woningbeveiliging</loc>
+    <lastmod>2025-01-15T10:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/forum/buurtpreventie</loc>
+    <lastmod>2025-01-15T10:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal and Contact -->
+  <url>
+    <loc>https://politie-forum.nl/forum/juridische-kwesties</loc>
+    <lastmod>2025-01-15T09:30:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/contact</loc>
+    <lastmod>2025-01-15T09:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/admin</loc>
+    <lastmod>2025-01-15T08:30:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://politie-forum.nl/privacy-policy</loc>
+    <lastmod>2025-01-01T12:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/terms-of-service</loc>
+    <lastmod>2025-01-01T12:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://politie-forum.nl/disclaimer</loc>
+    <lastmod>2025-01-01T12:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>

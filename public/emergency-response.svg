@@ -1,0 +1,61 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="emergencyGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF4444;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#CC0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#880000;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="lightPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="300" fill="#1a1a1a"/>
+
+  <!-- Emergency Cross -->
+  <g transform="translate(150, 150)">
+    <!-- Outer Glow -->
+    <circle cx="0" cy="0" r="80" fill="url(#emergencyGradient)" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Main Cross -->
+    <rect x="-8" y="-40" width="16" height="80" fill="#FF0000" stroke="#ffffff" stroke-width="2"/>
+    <rect x="-40" y="-8" width="80" height="16" fill="#FF0000" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Inner Cross -->
+    <rect x="-4" y="-35" width="8" height="70" fill="#ffffff"/>
+    <rect x="-35" y="-4" width="70" height="8" fill="#ffffff"/>
+
+    <!-- Emergency Light -->
+    <circle cx="0" cy="-50" r="12" fill="url(#lightPulse)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="-50" r="6" fill="#FFD700">
+      <animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Warning Symbol -->
+    <path d="M-25 -25 L25 -25 L0 15 Z" fill="#FFD700" stroke="#000" stroke-width="2"/>
+    <text x="0" y="-10" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#000">!</text>
+  </g>
+
+  <!-- Emergency Text -->
+  <text x="150" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FF0000">EMERGENCY</text>
+  <text x="150" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">112 - BEL NU</text>
+
+  <!-- Decorative Elements -->
+  <g opacity="0.5">
+    <circle cx="50" cy="50" r="8" fill="#FF0000">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="60" r="6" fill="#FFD700">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="240" r="7" fill="#FF0000">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

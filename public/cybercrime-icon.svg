@@ -1,0 +1,72 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f1f5f9" rx="10"/>
+
+  <!-- Computer Screen -->
+  <g transform="translate(50, 60)">
+    <!-- Monitor -->
+    <rect x="0" y="0" width="100" height="60" fill="url(#screenGradient)" rx="5"/>
+    <!-- Screen Content -->
+    <rect x="5" y="5" width="90" height="50" fill="#000" rx="2"/>
+    <!-- Code Lines -->
+    <rect x="10" y="15" width="30" height="2" fill="#00ff00" opacity="0.8"/>
+    <rect x="10" y="20" width="50" height="2" fill="#00ff00" opacity="0.8"/>
+    <rect x="10" y="25" width="40" height="2" fill="#00ff00" opacity="0.8"/>
+    <rect x="10" y="30" width="35" height="2" fill="#00ff00" opacity="0.8"/>
+    <!-- Warning Symbol -->
+    <polygon points="70,15 80,15 75,25" fill="#ff6b35"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ff6b35">!</text>
+  </g>
+
+  <!-- Shield -->
+  <g transform="translate(100, 120)">
+    <path d="M0,-25 L-15,0 L-10,20 L10,20 L15,0 Z" fill="url(#cyberGradient)" stroke="#1e40af" stroke-width="2"/>
+    <!-- Lock -->
+    <rect x="-8" y="5" width="16" height="10" fill="#374151" rx="2"/>
+    <rect x="-6" y="7" width="12" height="6" fill="#6b7280" rx="1"/>
+    <circle cx="0" cy="10" r="2" fill="#9ca3af"/>
+  </g>
+
+  <!-- Binary Code -->
+  <g transform="translate(20, 30)">
+    <text x="0" y="0" font-family="monospace" font-size="8" fill="#64748b">01010101</text>
+    <text x="0" y="10" font-family="monospace" font-size="8" fill="#64748b">10101010</text>
+  </g>
+
+  <g transform="translate(140, 30)">
+    <text x="0" y="0" font-family="monospace" font-size="8" fill="#64748b">01100110</text>
+    <text x="0" y="10" font-family="monospace" font-size="8" fill="#64748b">10011001</text>
+  </g>
+
+  <!-- Network Nodes -->
+  <circle cx="30" cy="80" r="3" fill="#3b82f6" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="170" cy="80" r="3" fill="#3b82f6" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="40" r="3" fill="#3b82f6" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connection Lines -->
+  <line x1="30" y1="80" x2="100" y2="40" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <line x1="170" y1="80" x2="100" y2="40" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <line x1="30" y1="80" x2="170" y2="80" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e3a8a">CYBERCRIMINE</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Digitale Veiligheid</text>
+</svg>

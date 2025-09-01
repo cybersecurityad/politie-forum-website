@@ -1,0 +1,117 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="youthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcd34d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="schoolGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#fffbeb" rx="10"/>
+
+  <!-- School Building -->
+  <g transform="translate(60, 70)">
+    <!-- Main Building -->
+    <rect x="0" y="20" width="80" height="60" fill="url(#schoolGradient)" stroke="#6b7280" stroke-width="1"/>
+    <!-- Roof -->
+    <polygon points="0,20 -10,20 40,0 90,20" fill="#dc2626"/>
+    <!-- Door -->
+    <rect x="35" y="50" width="10" height="30" fill="#8b4513"/>
+    <!-- Windows -->
+    <rect x="10" y="30" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <rect x="30" y="30" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <rect x="50" y="30" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <rect x="10" y="45" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <rect x="30" y="45" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <rect x="50" y="45" width="12" height="10" fill="#60a5fa" opacity="0.8"/>
+    <!-- School Bell -->
+    <rect x="38" y="15" width="4" height="8" fill="#ffd700"/>
+    <circle cx="40" cy="23" r="1" fill="#ffd700"/>
+  </g>
+
+  <!-- Students -->
+  <g transform="translate(30, 120)">
+    <!-- Student 1 -->
+    <circle cx="0" cy="-5" r="5" fill="#fbbf24"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#3b82f6"/>
+    <!-- Backpack -->
+    <rect x="-4" y="2" width="2" height="6" fill="#8b5cf6"/>
+  </g>
+
+  <g transform="translate(60, 125)">
+    <!-- Student 2 -->
+    <circle cx="0" cy="-5" r="5" fill="#f97316"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#10b981"/>
+    <!-- Backpack -->
+    <rect x="-4" y="2" width="2" height="6" fill="#059669"/>
+  </g>
+
+  <g transform="translate(90, 118)">
+    <!-- Student 3 -->
+    <circle cx="0" cy="-5" r="5" fill="#ec4899"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#f59e0b"/>
+    <!-- Backpack -->
+    <rect x="-4" y="2" width="2" height="6" fill="#d97706"/>
+  </g>
+
+  <!-- Police Officer -->
+  <g transform="translate(140, 115)">
+    <circle cx="0" cy="-5" r="5" fill="#fbbf24"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#0000ff"/>
+    <!-- Badge -->
+    <circle cx="0" cy="3" r="2" fill="#ffd700"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#000">P</text>
+  </g>
+
+  <!-- Safety Elements -->
+  <g transform="translate(20, 40)">
+    <!-- Safety Cone -->
+    <polygon points="0,15 8,15 4,0" fill="#ff6b35"/>
+    <rect x="3" y="15" width="2" height="5" fill="#000"/>
+    <!-- Stripes -->
+    <rect x="1" y="5" width="6" height="2" fill="#ffffff"/>
+    <rect x="1" y="9" width="6" height="2" fill="#ffffff"/>
+  </g>
+
+  <g transform="translate(160, 30)">
+    <!-- Stop Sign -->
+    <polygon points="0,0 10,0 10,10 0,10" fill="#ff0000" transform="rotate(45 5 5)"/>
+    <text x="5" y="7" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" transform="rotate(45 5 5)">STOP</text>
+  </g>
+
+  <!-- Playground -->
+  <g transform="translate(120, 80)">
+    <!-- Swing Set -->
+    <rect x="0" y="0" width="2" height="20" fill="#8b4513"/>
+    <rect x="15" y="0" width="2" height="20" fill="#8b4513"/>
+    <rect x="-5" y="20" width="27" height="2" fill="#8b4513"/>
+    <!-- Swings -->
+    <rect x="3" y="5" width="1" height="15" fill="#374151"/>
+    <rect x="13" y="5" width="1" height="15" fill="#374151"/>
+    <!-- Seats -->
+    <rect x="1" y="18" width="4" height="2" fill="#6b7280"/>
+    <rect x="11" y="18" width="4" height="2" fill="#6b7280"/>
+  </g>
+
+  <!-- Safety Symbols -->
+  <g transform="translate(30, 20)">
+    <!-- Helmet -->
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#374151"/>
+    <ellipse cx="0" cy="-2" rx="4" ry="2" fill="#6b7280"/>
+  </g>
+
+  <g transform="translate(50, 20)">
+    <!-- Hand Holding -->
+    <path d="M0,5 Q2,2 4,2 Q6,2 6,5 L6,8 Q6,10 4,10 L2,10 Q0,10 0,8 Z" fill="#fbbf24"/>
+    <circle cx="3" cy="1" r="1" fill="#fbbf24"/>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">JEUGDVEILIGHEID</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">School & Bescherming</text>
+</svg>

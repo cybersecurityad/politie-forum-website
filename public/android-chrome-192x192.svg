@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <style>
+      .background { fill: #00008b; }
+      .shield { fill: #ffffff; }
+      .star { fill: #00008b; }
+      .accent { fill: #f60707; }
+    </style>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="96" class="background"/>
+  <!-- Police Shield -->
+  <path class="shield" d="M96 32L144 56V96C144 128 120 152 96 152C72 152 48 128 48 96V56L96 32Z"/>
+  <!-- Star -->
+  <path class="star" d="M96 56L108 80L132 80L112.5 95L117 120L96 105L75 120L79.5 95L60 80L84 80L96 56Z"/>
+  <!-- Accent Line -->
+  <rect x="60" y="120" width="72" height="8" class="accent" rx="4"/>
+</svg>

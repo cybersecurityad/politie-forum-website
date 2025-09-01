@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      .icon-bg { fill: #00008b; }
+      .icon-detail { fill: #ffffff; }
+      .lock { fill: #f60707; }
+    </style>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="32" class="icon-bg"/>
+  <!-- House -->
+  <path d="M16 28L32 16L48 28V44H36V36H28V44H16V28Z" class="icon-detail"/>
+  <!-- Lock -->
+  <rect x="26" y="36" width="12" height="8" fill="#f60707"/>
+  <rect x="28" y="38" width="8" height="4" fill="#ffffff"/>
+  <circle cx="32" cy="42" r="1" fill="#f60707"/>
+</svg>

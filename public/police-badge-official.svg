@@ -1,0 +1,54 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0A0A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f8f9fa"/>
+
+  <!-- Police Badge -->
+  <g transform="translate(150, 100)">
+    <!-- Outer Shield -->
+    <path d="M-40 0 L-35 -15 L-20 -25 L0 -30 L20 -25 L35 -15 L40 0 L35 15 L20 25 L0 30 L-20 25 L-35 15 Z"
+          fill="url(#shieldGradient)" stroke="#B8860B" stroke-width="3"/>
+
+    <!-- Inner Badge -->
+    <circle cx="0" cy="0" r="25" fill="url(#badgeGradient)" stroke="#666" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="#FFD700" stroke="#B8860B" stroke-width="1"/>
+
+    <!-- Star -->
+    <path d="M0 -12 L3 -4 L12 -4 L5 2 L7 10 L0 6 L-7 10 L-5 2 L-12 -4 L-3 -4 Z"
+          fill="#000080" stroke="#000" stroke-width="1"/>
+
+    <!-- Text -->
+    <text x="0" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#000">POLITIE</text>
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#333">NEDERLAND</text>
+
+    <!-- Laurel Wreath -->
+    <path d="M-45 -5 Q-50 -15 -40 -20 Q-30 -15 -35 -5"
+          fill="none" stroke="#228B22" stroke-width="2" stroke-linecap="round"/>
+    <path d="M45 -5 Q50 -15 40 -20 Q30 -15 35 -5"
+          fill="none" stroke="#228B22" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Decorative Elements -->
+  <g opacity="0.6">
+    <!-- Stars -->
+    <path d="M50 50 L52 56 L58 56 L53 60 L55 66 L50 62 L45 66 L47 60 L42 56 L48 56 Z" fill="#FFD700"/>
+    <path d="M250 40 L252 46 L258 46 L253 50 L255 56 L250 52 L245 56 L247 50 L242 46 L248 46 Z" fill="#FFD700"/>
+    <path d="M60 150 L62 156 L68 156 L63 160 L65 166 L60 162 L55 166 L57 160 L52 156 L58 156 Z" fill="#FFD700"/>
+  </g>
+
+  <!-- Title -->
+  <text x="150" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00008B">OFFICIËLE</text>
+  <text x="150" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00008B">POLITIE BADGE</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <style>
+      .background { fill: #f4f6f9; }
+      .text { fill: #666; font-family: Arial, sans-serif; font-size: 16px; }
+      .title { fill: #00008b; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+      .icon { fill: #00008b; }
+      .alert { fill: #f60707; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="200" class="background"/>
+  <!-- Magnifying Glass Icon -->
+  <g transform="translate(20, 20)">
+    <circle cx="25" cy="25" r="20" fill="none" stroke="#00008b" stroke-width="3"/>
+    <circle cx="25" cy="25" r="12" fill="#00008b"/>
+    <rect x="32" y="32" width="8" height="3" fill="#00008b"/>
+  </g>
+  <!-- Alert Triangle -->
+  <g transform="translate(320, 20)">
+    <path d="M0 40L30 0L60 40Z" fill="#f60707"/>
+    <text x="30" y="28" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">!</text>
+  </g>
+  <!-- Title -->
+  <text x="80" y="50" class="title">Opsporing Verzocht</text>
+  <!-- Description -->
+  <text x="80" y="80" class="text">Actuele opsporingsberichten en</text>
+  <text x="80" y="100" class="text">gezochte personen in Nederland</text>
+  <!-- Date -->
+  <text x="80" y="130" class="text" style="font-size: 14px; fill: #999;">Deze week op TV</text>
+  <!-- Wanted Poster Style Border -->
+  <rect x="10" y="10" width="380" height="180" fill="none" stroke="#00008b" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <style>
+      .browser-bg { fill: #ffffff; }
+      .content { fill: #333; font-family: Arial, sans-serif; }
+      .header { fill: #00008b; }
+      .sidebar { fill: #f4f6f9; }
+      .card { fill: #ffffff; stroke: #ddd; stroke-width: 1; }
+      .button { fill: #00008b; }
+      .text { fill: #666; font-size: 14px; }
+      .title { fill: #00008b; font-size: 18px; font-weight: bold; }
+      .emergency { fill: #ff0000; }
+    </style>
+  </defs>
+  <!-- Browser Window -->
+  <rect width="1280" height="720" class="browser-bg"/>
+  <!-- Browser Header -->
+  <rect x="0" y="0" width="1280" height="80" fill="#f4f6f9"/>
+  <text x="100" y="30" class="text">Politie-Forum.nl - Laatste politienieuws Nederland</text>
+  <!-- Address Bar -->
+  <rect x="80" y="40" width="1000" height="30" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="90" y="58" class="text">https://politie-forum.nl/</text>
+  <!-- Main Layout -->
+  <!-- Header -->
+  <rect x="0" y="80" width="1280" height="80" class="header"/>
+  <text x="100" y="110" fill="#ffffff" font-size="20" font-weight="bold">Politie-Forum.nl</text>
+  <text x="100" y="130" fill="#ffffff" style="font-size: 14px;">Laatste politienieuws en veiligheidsforum Nederland</text>
+  <!-- Navigation -->
+  <rect x="0" y="160" width="1280" height="50" fill="#f4f6f9"/>
+  <text x="640" y="185" text-anchor="middle" class="text">Home • Forum • Opsporingen • Contact • Admin</text>
+  <!-- Main Content Area -->
+  <rect x="50" y="220" width="800" height="400" fill="#ffffff"/>
+  <!-- News Section -->
+  <text x="100" y="250" class="title">Laatste Politienieuws</text>
+  <!-- News Cards -->
+  <rect x="100" y="270" width="350" height="150" class="card"/>
+  <text x="275" y="300" text-anchor="middle" class="text" style="font-size: 12px;">Breaking: Grote politieactie in Amsterdam</text>
+  <rect x="470" y="270" width="350" height="150" class="card"/>
+  <text x="645" y="300" text-anchor="middle" class="text" style="font-size: 12px;">Opsporing Verzocht deze week</text>
+  <!-- Sidebar -->
+  <rect x="900" y="220" width="330" height="400" class="sidebar"/>
+  <text x="1065" y="250" text-anchor="middle" class="title">Forum Categorieën</text>
+  <!-- Emergency Widget -->
+  <rect x="920" y="280" width="290" height="100" class="emergency"/>
+  <text x="1065" y="310" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Noodnummers</text>
+  <text x="1065" y="330" text-anchor="middle" fill="#ffffff" style="font-size: 12px;">112 • Politie 0900-8844 • Mishandeling 0800-2000</text>
+  <!-- Footer -->
+  <rect x="0" y="640" width="1280" height="80" class="header"/>
+  <text x="640" y="670" text-anchor="middle" fill="#ffffff" style="font-size: 12px;">Politie-Forum.nl © 2025 - Alle rechten voorbehouden</text>
+</svg>

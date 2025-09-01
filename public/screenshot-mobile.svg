@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <style>
+      .phone-bg { fill: #000000; }
+      .screen-bg { fill: #ffffff; }
+      .content { fill: #333; font-family: Arial, sans-serif; }
+      .header { fill: #00008b; }
+      .button { fill: #00008b; }
+      .text { fill: #666; font-size: 14px; }
+      .title { fill: #00008b; font-size: 18px; font-weight: bold; }
+    </style>
+  </defs>
+  <!-- Phone Body -->
+  <rect width="390" height="844" rx="30" class="phone-bg"/>
+  <!-- Screen -->
+  <rect x="15" y="60" width="360" height="724" rx="20" class="screen-bg"/>
+  <!-- Status Bar -->
+  <rect x="15" y="60" width="360" height="40" fill="#f4f6f9"/>
+  <text x="195" y="85" text-anchor="middle" class="text">9:41</text>
+  <!-- Header -->
+  <rect x="15" y="100" width="360" height="60" fill="#00008b"/>
+  <text x="195" y="125" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Politie-Forum.nl</text>
+  <!-- Navigation -->
+  <rect x="15" y="160" width="360" height="50" fill="#f4f6f9"/>
+  <text x="195" y="185" text-anchor="middle" class="text">Home • Forum • Opsporingen • Contact</text>
+  <!-- Main Content -->
+  <rect x="30" y="220" width="330" height="150" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="195" y="250" text-anchor="middle" class="title">Laatste Politienieuws</text>
+  <text x="195" y="275" text-anchor="middle" class="text">Blijf op de hoogte van het laatste</text>
+  <text x="195" y="295" text-anchor="middle" class="text">politie nieuws uit Nederland</text>
+  <!-- News Cards -->
+  <rect x="30" y="380" width="150" height="100" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="105" y="410" text-anchor="middle" class="text" style="font-size: 12px;">Nieuws</text>
+  <rect x="200" y="380" width="150" height="100" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="275" y="410" text-anchor="middle" class="text" style="font-size: 12px;">Forum</text>
+  <!-- Emergency Section -->
+  <rect x="30" y="490" width="330" height="80" fill="#ff0000"/>
+  <text x="195" y="515" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Noodnummers</text>
+  <text x="195" y="535" text-anchor="middle" fill="#ffffff" style="font-size: 12px;">112 • Politie • Mishandeling</text>
+  <!-- Footer -->
+  <rect x="15" y="580" width="360" height="60" fill="#00008b"/>
+  <text x="195" y="605" text-anchor="middle" fill="#ffffff" style="font-size: 12px;">Politie-Forum.nl © 2025</text>
+</svg>

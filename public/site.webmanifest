@@ -1,0 +1,79 @@
+{
+  "name": "Politie-Forum.nl - Laatste politienieuws Nederland",
+  "short_name": "Politie-Forum.nl",
+  "description": "Blijf op de hoogte van het laatste politienieuws uit Nederland. Discussieer over politieberichten, veiligheidszaken en misdaadnieuws in ons forum.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00008b",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "nl-NL",
+  "categories": ["news", "government", "security"],
+  "icons": [
+    {
+      "src": "favicon-16x16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon-32x32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "android-chrome-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Laatste Nieuws",
+      "short_name": "Nieuws",
+      "description": "Bekijk het laatste politienieuws",
+      "url": "/nieuws",
+      "icons": [{ "src": "favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Forum",
+      "short_name": "Forum",
+      "description": "Discussieer in het forum",
+      "url": "/forum",
+      "icons": [{ "src": "favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Opsporingen",
+      "short_name": "Opsporingen",
+      "description": "Actuele opsporingen",
+      "url": "/opsporingen",
+      "icons": [{ "src": "favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

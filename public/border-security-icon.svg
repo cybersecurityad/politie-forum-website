@@ -1,0 +1,127 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4b5563;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b7280;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flagGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="66%" style="stop-color="#0000ff";stop-opacity:1" />
+      <stop offset="100%" style="stop-color="#0000ff";stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f9fafb" rx="10"/>
+
+  <!-- Border Fence -->
+  <g transform="translate(20, 100)">
+    <!-- Fence Posts -->
+    <rect x="0" y="0" width="3" height="40" fill="#8b4513"/>
+    <rect x="20" y="0" width="3" height="40" fill="#8b4513"/>
+    <rect x="40" y="0" width="3" height="40" fill="#8b4513"/>
+    <rect x="60" y="0" width="3" height="40" fill="#8b4513"/>
+    <rect x="80" y="0" width="3" height="40" fill="#8b4513"/>
+    <!-- Fence Rails -->
+    <rect x="0" y="10" width="83" height="2" fill="#666"/>
+    <rect x="0" y="20" width="83" height="2" fill="#666"/>
+    <rect x="0" y="30" width="83" height="2" fill="#666"/>
+    <!-- Barbed Wire -->
+    <path d="M0,5 L83,5" stroke="#333" stroke-width="1"/>
+    <path d="M0,7 L83,7" stroke="#333" stroke-width="1"/>
+    <!-- Spikes -->
+    <polygon points="5,5 7,3 9,5" fill="#333"/>
+    <polygon points="25,5 27,3 29,5" fill="#333"/>
+    <polygon points="45,5 47,3 49,5" fill="#333"/>
+    <polygon points="65,5 67,3 69,5" fill="#333"/>
+  </g>
+
+  <!-- Border Control Booth -->
+  <g transform="translate(120, 80)">
+    <rect x="0" y="20" width="40" height="40" fill="#e5e7eb" stroke="#6b7280" stroke-width="1"/>
+    <!-- Roof -->
+    <polygon points="0,20 -5,20 20,5 45,20" fill="#374151"/>
+    <!-- Window -->
+    <rect x="10" y="25" width="20" height="15" fill="#87ceeb" opacity="0.7"/>
+    <rect x="12" y="27" width="16" height="11" fill="#ffffff" opacity="0.5"/>
+    <!-- Door -->
+    <rect x="30" y="30" width="8" height="30" fill="#8b4513"/>
+  </g>
+
+  <!-- Passport Control -->
+  <g transform="translate(140, 110)">
+    <!-- Officer -->
+    <circle cx="0" cy="-5" r="5" fill="#fbbf24"/>
+    <rect x="-3" y="0" width="6" height="10" fill="#0000ff"/>
+    <!-- Badge -->
+    <circle cx="0" cy="3" r="2" fill="#ffd700"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#000">P</text>
+  </g>
+
+  <!-- Passport -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="25" height="15" fill="#1f2937" rx="2"/>
+    <rect x="2" y="2" width="21" height="11" fill="#ffffff"/>
+    <!-- Dutch Flag -->
+    <rect x="3" y="3" width="19" height="3" fill="#dc2626"/>
+    <rect x="3" y="6" width="19" height="3" fill="#ffffff"/>
+    <rect x="3" y="9" width="19" height="3" fill="#0000ff"/>
+    <!-- Text -->
+    <text x="12" y="7" text-anchor="middle" font-family="Arial, sans-serif" font-size="3" fill="#000">PASPOORT</text>
+  </g>
+
+  <!-- Surveillance Camera -->
+  <g transform="translate(80, 30)">
+    <!-- Mount -->
+    <rect x="-1" y="10" width="2" height="8" fill="#333"/>
+    <!-- Camera Body -->
+    <rect x="-5" y="0" width="10" height="12" fill="#1f2937" rx="2"/>
+    <!-- Lens -->
+    <circle cx="0" cy="6" r="4" fill="#000"/>
+    <circle cx="0" cy="6" r="2" fill="#374151"/>
+    <!-- Light -->
+    <circle cx="0" cy="2" r="1" fill="#ff0000" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Border Sign -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="20" height="12" fill="#ffffff" stroke="#000" stroke-width="1"/>
+    <text x="10" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#000">GRENS</text>
+    <!-- Arrow -->
+    <polygon points="10,12 7,15 13,15" fill="#000"/>
+  </g>
+
+  <!-- Security Checkpoint -->
+  <g transform="translate(160, 50)">
+    <!-- Barrier -->
+    <rect x="0" y="15" width="20" height="3" fill="#ff6b35"/>
+    <rect x="0" y="0" width="3" height="18" fill="#666"/>
+    <rect x="17" y="0" width="3" height="18" fill="#666"/>
+    <!-- Stripes -->
+    <rect x="2" y="2" width="16" height="2" fill="#ffffff"/>
+    <rect x="2" y="6" width="16" height="2" fill="#ffffff"/>
+    <rect x="2" y="10" width="16" height="2" fill="#ffffff"/>
+    <rect x="2" y="14" width="16" height="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Radar/Surveillance -->
+  <g transform="translate(100, 20)">
+    <!-- Radar Dish -->
+    <ellipse cx="0" cy="0" rx="15" ry="8" fill="#374151"/>
+    <ellipse cx="0" cy="0" rx="12" ry="6" fill="#4b5563"/>
+    <!-- Sweep Line -->
+    <line x1="0" y1="0" x2="12" y2="0" stroke="#00ff00" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <!-- Base -->
+    <rect x="-2" y="8" width="4" height="6" fill="#6b7280"/>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151">GRENSBEVEILIGING</text>
+  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4b5563">Toegang & Controle</text>
+</svg>

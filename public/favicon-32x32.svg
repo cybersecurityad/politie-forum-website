@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .shield { fill: #00008b; }
+      .star { fill: #ffffff; }
+      .border { fill: none; stroke: #002d6b; stroke-width: 1; }
+    </style>
+  </defs>
+  <!-- Police Shield -->
+  <path class="shield" d="M16 4L24 8V16C24 21 20.5 25 16 25C11.5 25 8 21 8 16V8L16 4Z"/>
+  <path class="border" d="M16 4L24 8V16C24 21 20.5 25 16 25C11.5 25 8 21 8 16V8L16 4Z"/>
+  <!-- Star -->
+  <path class="star" d="M16 8L18 12L22 12L19 14.5L20 19L16 16.5L12 19L13 14.5L10 12L14 12L16 8Z"/>
+</svg>

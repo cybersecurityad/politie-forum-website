@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      .icon-bg { fill: #00008b; }
+      .icon-detail { fill: #ffffff; }
+      .scale { fill: #f60707; }
+    </style>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="32" class="icon-bg"/>
+  <!-- Scales of Justice -->
+  <path d="M20 20L44 20L42 16L22 16Z" class="icon-detail"/>
+  <rect x="30" y="20" width="4" height="16" class="icon-detail"/>
+  <path d="M16 36L48 36L46 32L18 32Z" class="icon-detail"/>
+  <rect x="30" y="36" width="4" height="16" class="icon-detail"/>
+  <!-- Balance Point -->
+  <circle cx="32" cy="28" r="2" class="scale"/>
+</svg>

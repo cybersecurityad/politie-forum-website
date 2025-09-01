@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <style>
+      .background { fill: #f4f6f9; }
+      .text { fill: #666; font-family: Arial, sans-serif; font-size: 16px; }
+      .title { fill: #00008b; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; }
+      .icon { fill: #00008b; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="200" class="background"/>
+  <!-- Newspaper Icon -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="60" height="80" fill="#ffffff" stroke="#00008b" stroke-width="2"/>
+    <line x1="10" y1="20" x2="50" y2="20" stroke="#00008b" stroke-width="2"/>
+    <line x1="10" y1="30" x2="50" y2="30" stroke="#00008b" stroke-width="2"/>
+    <line x1="10" y1="40" x2="40" y2="40" stroke="#00008b" stroke-width="2"/>
+    <line x1="10" y1="50" x2="45" y2="50" stroke="#00008b" stroke-width="2"/>
+    <line x1="10" y1="60" x2="35" y2="60" stroke="#00008b" stroke-width="2"/>
+  </g>
+  <!-- Title -->
+  <text x="100" y="50" class="title">Laatste Politienieuws</text>
+  <!-- Description -->
+  <text x="100" y="80" class="text">Blijf op de hoogte van het laatste</text>
+  <text x="100" y="100" class="text">politie nieuws uit Nederland</text>
+  <!-- Date -->
+  <text x="100" y="130" class="text" style="font-size: 14px; fill: #999;">Geplaatst: Vandaag</text>
+  <!-- Police Badge -->
+  <g transform="translate(320, 20)">
+    <circle cx="30" cy="30" r="25" fill="#00008b"/>
+    <path d="M30 15L40 25L50 25L42.5 30L45 40L30 32.5L15 40L17.5 30L10 25L20 25L30 15Z" fill="#ffffff"/>
+  </g>
+</svg>
