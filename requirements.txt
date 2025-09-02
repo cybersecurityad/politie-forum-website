@@ -3,7 +3,7 @@
 # Web Scraping
 selenium==4.15.0
 beautifulsoup4==4.12.2
-requests==2.31.0
+requests==2.32.4
 
 # AI/NLP Processing  
 groq==0.4.2
